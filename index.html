@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skill Matcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-2xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100">
+        <div class="bg-indigo-600 p-8 text-white text-center">
+            <h1 class="text-3xl font-extrabold tracking-tight">Explainable AI Matcher</h1>
+            <p class="mt-2 text-indigo-100 uppercase tracking-widest text-sm font-semibold">Skill-Based Ranking System</p>
+        </div>
+
+        <div class="p-8">
+            <div class="flex justify-between items-center border-b pb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800">{{ job.role }}</h2>
+                    <p class="text-indigo-600 font-medium">{{ job.company }}</p>
+                </div>
+                <div class="text-right">
+                    <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm font-bold">Active Listing</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center my-10">
+                <div class="relative flex items-center justify-center">
+                    <div class="w-32 h-32 rounded-full border-8 border-slate-100 flex items-center justify-center">
+                        <span class="text-4xl font-black text-slate-800">{{ score }}%</span>
+                    </div>
+                </div>
+                <p class="mt-4 text-slate-500 font-medium">Your Match Score</p>
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl p-6 text-slate-300 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <h3 class="text-white font-bold mb-2 flex items-center">
+                    <span class="mr-2">✨</span> AI Reasoning (Explainable)
+                </h3>
+                <p class="text-sm leading-relaxed">
+                    {{ reason }}
+                </p>
+            </div>
+
+            <div class="mt-8 flex items-center justify-center text-slate-400 text-xs uppercase tracking-tighter">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04L3 9.75c0 4.474 3.078 8.233 7.39 9.14a1 1 0 00.22 0c4.312-.907 7.39-4.666 7.39-9.14l-.382-3.766z"></path></svg>
+                Fairness-Aware Algorithm Enabled
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
